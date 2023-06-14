@@ -1,0 +1,22 @@
+[
+    {
+        "externalIdType": "ARN",
+        "externalIdValue": "444786978999",
+        "displayName": "Samsung Inc."
+    },
+    {
+        "externalIdType": "ABN",
+        "externalIdValue": "51824753556",
+        "displayName": "Goal.Fish"
+    },
+    {
+        "externalIdType": "ABN",
+        "externalIdValue": "11111111111",
+        "displayName": "Dummy ABN"
+    },
+    {
+        "externalIdType": "ARN",
+        "externalIdValue": "2222222222222",
+        "displayName": "Dummy ARN"
+    }
+]

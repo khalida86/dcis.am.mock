@@ -1,0 +1,967 @@
+{
+    "Scenarios": {
+        "GetIntermediaries": [
+            {
+                "Client": {
+                    "ClientInternalID": "12345679",
+                    "ClientEndDateSpecified": false,
+                    "ClientRegistrationDateSpecified": false,
+                    "ClientRegistrationApplicationReceivedDateSpecified": false,
+                    "ClientIdentityStrengthConfirmationDateSpecified": false,
+                    "ClientLastUpdatedByDateSpecified": false,
+                    "ClientLastUpdatedByTimeSpecified": false,
+                    "ClientTypeCode": "90",
+                    "ClientTypeEffectiveDateSpecified": false,
+                    "ClientTypeEndDateSpecified": false,
+                    "ClientTypeListAccessCodeSpecified": false,
+                    "ClientTypeViewAccessCodeSpecified": false,
+                    "ClientTypeAddAccessCodeSpecified": false,
+                    "ClientTypeModifyAccessCodeSpecified": false,
+                    "ClientEstablishmentDateSpecified": false,
+                    "RoleTypeCodeSpecified": false,
+                    "ClientIdentifiers": [
+                        {
+                            "ClientIdentifierTypeCode": "10",
+                            "ClientIdentifierValueID": "162210001",
+                            "ClientIdentifierStartDateSpecified": false,
+                            "ClientIdentifierEndDateSpecified": false,
+                            "ClientAccountID": "05050145",
+                            "ClientRoleTypeCode": "90",
+                            "ClientIdentifierLastUpdatedDateSpecified": false,
+                            "ClientIdentifierLastUpdatedTimeSpecified": false
+                        }
+                    ],
+                    "ClientAccount": [
+                        {
+                            "ClientAccountLastUpdatedDateSpecified": false,
+                            "ClientAccountLastUpdatedTimeSpecified": false,
+                            "ClientAccountName": [
+                                {
+                                    "ClientNameStartDateSpecified": false,
+                                    "ClientNameEndDateSpecified": false,
+                                    "ClientNameLastUpdatedDateSpecified": false,
+                                    "ClientNameLastUpdatedTimeSpecified": false,
+                                    "UnstructuredName": {
+                                        "ClientInternalID": "16226000",
+                                        "ClientNameTypeCode": "90",
+                                        "UnstructuredFullName": "GUY B BAKER",
+                                        "UnstructuredNameLine1": "Doghoz"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "ClientIdentifierTaxAgentCount": "1001"
+            },
+            {
+                "Client": {
+                    "ClientInternalID": "12345679",
+                    "ClientEndDateSpecified": false,
+                    "ClientRegistrationDateSpecified": false,
+                    "ClientRegistrationApplicationReceivedDateSpecified": false,
+                    "ClientIdentityStrengthConfirmationDateSpecified": false,
+                    "ClientLastUpdatedByDateSpecified": false,
+                    "ClientLastUpdatedByTimeSpecified": false,
+                    "ClientTypeCode": "90",
+                    "ClientTypeEffectiveDateSpecified": false,
+                    "ClientTypeEndDateSpecified": false,
+                    "ClientTypeListAccessCodeSpecified": false,
+                    "ClientTypeViewAccessCodeSpecified": false,
+                    "ClientTypeAddAccessCodeSpecified": false,
+                    "ClientTypeModifyAccessCodeSpecified": false,
+                    "ClientEstablishmentDateSpecified": false,
+                    "RoleTypeCodeSpecified": false,
+                    "ClientIdentifiers": [
+                        {
+                            "ClientIdentifierTypeCode": "10",
+                            "ClientIdentifierValueID": "16226000",
+                            "ClientIdentifierStartDateSpecified": false,
+                            "ClientIdentifierEndDateSpecified": false,
+                            "ClientAccountID": "05050145",
+                            "ClientRoleTypeCode": "90",
+                            "ClientIdentifierLastUpdatedDateSpecified": false,
+                            "ClientIdentifierLastUpdatedTimeSpecified": false
+                        }
+                    ],
+                    "ClientAccount": [
+                        {
+                            "ClientAccountLastUpdatedDateSpecified": false,
+                            "ClientAccountLastUpdatedTimeSpecified": false,
+                            "ClientAccountName": [
+                                {
+                                    "ClientNameStartDateSpecified": false,
+                                    "ClientNameEndDateSpecified": false,
+                                    "ClientNameLastUpdatedDateSpecified": false,
+                                    "ClientNameLastUpdatedTimeSpecified": false,
+                                    "UnstructuredName": {
+                                        "ClientInternalID": "16226000",
+                                        "ClientNameTypeCode": "90",
+                                        "UnstructuredFullName": "GUY B BAKER",
+                                        "UnstructuredNameLine1": "Doghoz"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "ClientIdentifierTaxAgentCount": "1",
+                "ActiveRanDetails": [
+                    {
+                        "Client": {
+                            "ClientInternalID": "16226000",
+                            "ClientEndDateSpecified": false,
+                            "ClientRegistrationDateSpecified": false,
+                            "ClientRegistrationApplicationReceivedDateSpecified": false,
+                            "ClientIdentityStrengthConfirmationDateSpecified": false,
+                            "ClientLastUpdatedByDateSpecified": false,
+                            "ClientLastUpdatedByTimeSpecified": false,
+                            "ClientTypeCode": "90",
+                            "ClientTypeEffectiveDateSpecified": false,
+                            "ClientTypeEndDateSpecified": false,
+                            "ClientTypeListAccessCodeSpecified": false,
+                            "ClientTypeViewAccessCodeSpecified": false,
+                            "ClientTypeAddAccessCodeSpecified": false,
+                            "ClientTypeModifyAccessCodeSpecified": false,
+                            "ClientEstablishmentDateSpecified": false,
+                            "RoleTypeCodeSpecified": false,
+                            "ClientIdentifiers": [
+                                {
+                                    "ClientIdentifierTypeCode": "15",
+                                    "ClientIdentifierValueID": "16226000",
+                                    "ClientIdentifierStartDateSpecified": false,
+                                    "ClientIdentifierEndDateSpecified": false,
+                                    "ClientAccountID": "05050145",
+                                    "ClientRoleTypeCode": "90",
+                                    "ClientIdentifierLastUpdatedDateSpecified": false,
+                                    "ClientIdentifierLastUpdatedTimeSpecified": false
+                                }
+                            ],
+                            "ClientAccount": [
+                                {
+                                    "ClientAccountLastUpdatedDateSpecified": false,
+                                    "ClientAccountLastUpdatedTimeSpecified": false,
+                                    "ClientAccountName": [
+                                        {
+                                            "ClientNameStartDateSpecified": false,
+                                            "ClientNameEndDateSpecified": false,
+                                            "ClientNameLastUpdatedDateSpecified": false,
+                                            "ClientNameLastUpdatedTimeSpecified": false,
+                                            "UnstructuredName": {
+                                                "ClientInternalID": "16226000",
+                                                "ClientNameTypeCode": "90",
+                                                "UnstructuredFullName": "GUY C BAKER",
+                                                "UnstructuredNameLine1": "Doghoz"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "Client": {
+                    "ClientInternalID": "12345321",
+                    "ClientEndDateSpecified": false,
+                    "ClientRegistrationDateSpecified": false,
+                    "ClientRegistrationApplicationReceivedDateSpecified": false,
+                    "ClientIdentityStrengthConfirmationDateSpecified": false,
+                    "ClientLastUpdatedByDateSpecified": false,
+                    "ClientLastUpdatedByTimeSpecified": false,
+                    "ClientTypeCode": "90",
+                    "ClientTypeEffectiveDateSpecified": false,
+                    "ClientTypeEndDateSpecified": false,
+                    "ClientTypeListAccessCodeSpecified": false,
+                    "ClientTypeViewAccessCodeSpecified": false,
+                    "ClientTypeAddAccessCodeSpecified": false,
+                    "ClientTypeModifyAccessCodeSpecified": false,
+                    "ClientEstablishmentDateSpecified": false,
+                    "RoleTypeCodeSpecified": false,
+                    "ClientIdentifiers": [
+                        {
+                            "ClientIdentifierTypeCode": "10",
+                            "ClientIdentifierValueID": "12345321",
+                            "ClientIdentifierStartDateSpecified": false,
+                            "ClientIdentifierEndDateSpecified": false,
+                            "ClientAccountID": "05050146",
+                            "ClientRoleTypeCode": "90",
+                            "ClientIdentifierLastUpdatedDateSpecified": false,
+                            "ClientIdentifierLastUpdatedTimeSpecified": false
+                        }
+                    ],
+                    "ClientAccount": [
+                        {
+                            "ClientAccountLastUpdatedDateSpecified": false,
+                            "ClientAccountLastUpdatedTimeSpecified": false,
+                            "ClientAccountName": [
+                                {
+                                    "ClientNameStartDateSpecified": false,
+                                    "ClientNameEndDateSpecified": false,
+                                    "ClientNameLastUpdatedDateSpecified": false,
+                                    "ClientNameLastUpdatedTimeSpecified": false,
+                                    "UnstructuredName": {
+                                        "ClientInternalID": "16226000",
+                                        "ClientNameTypeCode": "90",
+                                        "UnstructuredFullName": "Peter E YOUNG",
+                                        "UnstructuredNameLine1": "Pete"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "ClientIdentifierTaxAgentCount": "5",
+                "ActiveRanDetails": [
+                    {
+                        "Client": {
+                            "ClientInternalID": "16226223",
+                            "ClientEndDateSpecified": false,
+                            "ClientRegistrationDateSpecified": false,
+                            "ClientRegistrationApplicationReceivedDateSpecified": false,
+                            "ClientIdentityStrengthConfirmationDateSpecified": false,
+                            "ClientLastUpdatedByDateSpecified": false,
+                            "ClientLastUpdatedByTimeSpecified": false,
+                            "ClientTypeCode": "90",
+                            "ClientTypeEffectiveDateSpecified": false,
+                            "ClientTypeEndDateSpecified": false,
+                            "ClientTypeListAccessCodeSpecified": false,
+                            "ClientTypeViewAccessCodeSpecified": false,
+                            "ClientTypeAddAccessCodeSpecified": false,
+                            "ClientTypeModifyAccessCodeSpecified": false,
+                            "ClientEstablishmentDateSpecified": false,
+                            "RoleTypeCodeSpecified": false,
+                            "ClientIdentifiers": [
+                                {
+                                    "ClientIdentifierTypeCode": "15",
+                                    "ClientIdentifierValueID": "16221101",
+                                    "ClientIdentifierStartDateSpecified": false,
+                                    "ClientIdentifierEndDateSpecified": false,
+                                    "ClientAccountID": "05050145",
+                                    "ClientRoleTypeCode": "90",
+                                    "ClientIdentifierLastUpdatedDateSpecified": false,
+                                    "ClientIdentifierLastUpdatedTimeSpecified": false
+                                }
+                            ],
+                            "ClientAccount": [
+                                {
+                                    "ClientAccountLastUpdatedDateSpecified": false,
+                                    "ClientAccountLastUpdatedTimeSpecified": false,
+                                    "ClientAccountName": [
+                                        {
+                                            "ClientNameStartDateSpecified": false,
+                                            "ClientNameEndDateSpecified": false,
+                                            "ClientNameLastUpdatedDateSpecified": false,
+                                            "ClientNameLastUpdatedTimeSpecified": false,
+                                            "UnstructuredName": {
+                                                "ClientInternalID": "16226223",
+                                                "ClientNameTypeCode": "90",
+                                                "UnstructuredFullName": "DON D DELOUISE",
+                                                "UnstructuredNameLine1": "Donald"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "Client": {
+                            "ClientInternalID": "16226224",
+                            "ClientEndDateSpecified": false,
+                            "ClientRegistrationDateSpecified": false,
+                            "ClientRegistrationApplicationReceivedDateSpecified": false,
+                            "ClientIdentityStrengthConfirmationDateSpecified": false,
+                            "ClientLastUpdatedByDateSpecified": false,
+                            "ClientLastUpdatedByTimeSpecified": false,
+                            "ClientTypeCode": "90",
+                            "ClientTypeEffectiveDateSpecified": false,
+                            "ClientTypeEndDateSpecified": false,
+                            "ClientTypeListAccessCodeSpecified": false,
+                            "ClientTypeViewAccessCodeSpecified": false,
+                            "ClientTypeAddAccessCodeSpecified": false,
+                            "ClientTypeModifyAccessCodeSpecified": false,
+                            "ClientEstablishmentDateSpecified": false,
+                            "RoleTypeCodeSpecified": false,
+                            "ClientIdentifiers": [
+                                {
+                                    "ClientIdentifierTypeCode": "15",
+                                    "ClientIdentifierValueID": "16221102",
+                                    "ClientIdentifierStartDateSpecified": false,
+                                    "ClientIdentifierEndDateSpecified": false,
+                                    "ClientAccountID": "05050145",
+                                    "ClientRoleTypeCode": "90",
+                                    "ClientIdentifierLastUpdatedDateSpecified": false,
+                                    "ClientIdentifierLastUpdatedTimeSpecified": false
+                                }
+                            ],
+                            "ClientAccount": [
+                                {
+                                    "ClientAccountLastUpdatedDateSpecified": false,
+                                    "ClientAccountLastUpdatedTimeSpecified": false,
+                                    "ClientAccountName": [
+                                        {
+                                            "ClientNameStartDateSpecified": false,
+                                            "ClientNameEndDateSpecified": false,
+                                            "ClientNameLastUpdatedDateSpecified": false,
+                                            "ClientNameLastUpdatedTimeSpecified": false,
+                                            "UnstructuredName": {
+                                                "ClientInternalID": "16226224",
+                                                "ClientNameTypeCode": "90",
+                                                "UnstructuredFullName": "John E LISTER",
+                                                "UnstructuredNameLine1": "John"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "Client": {
+                            "ClientInternalID": "16226225",
+                            "ClientEndDateSpecified": false,
+                            "ClientRegistrationDateSpecified": false,
+                            "ClientRegistrationApplicationReceivedDateSpecified": false,
+                            "ClientIdentityStrengthConfirmationDateSpecified": false,
+                            "ClientLastUpdatedByDateSpecified": false,
+                            "ClientLastUpdatedByTimeSpecified": false,
+                            "ClientTypeCode": "90",
+                            "ClientTypeEffectiveDateSpecified": false,
+                            "ClientTypeEndDateSpecified": false,
+                            "ClientTypeListAccessCodeSpecified": false,
+                            "ClientTypeViewAccessCodeSpecified": false,
+                            "ClientTypeAddAccessCodeSpecified": false,
+                            "ClientTypeModifyAccessCodeSpecified": false,
+                            "ClientEstablishmentDateSpecified": false,
+                            "RoleTypeCodeSpecified": false,
+                            "ClientIdentifiers": [
+                                {
+                                    "ClientIdentifierTypeCode": "15",
+                                    "ClientIdentifierValueID": "16221103",
+                                    "ClientIdentifierStartDateSpecified": false,
+                                    "ClientIdentifierEndDateSpecified": false,
+                                    "ClientAccountID": "05050145",
+                                    "ClientRoleTypeCode": "90",
+                                    "ClientIdentifierLastUpdatedDateSpecified": false,
+                                    "ClientIdentifierLastUpdatedTimeSpecified": false
+                                }
+                            ],
+                            "ClientAccount": [
+                                {
+                                    "ClientAccountLastUpdatedDateSpecified": false,
+                                    "ClientAccountLastUpdatedTimeSpecified": false,
+                                    "ClientAccountName": [
+                                        {
+                                            "ClientNameStartDateSpecified": false,
+                                            "ClientNameEndDateSpecified": false,
+                                            "ClientNameLastUpdatedDateSpecified": false,
+                                            "ClientNameLastUpdatedTimeSpecified": false,
+                                            "UnstructuredName": {
+                                                "ClientInternalID": "16226225",
+                                                "ClientNameTypeCode": "90",
+                                                "UnstructuredFullName": "Sara J SMith",
+                                                "UnstructuredNameLine1": "Sara"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "Client": {
+                            "ClientInternalID": "16226226",
+                            "ClientEndDateSpecified": false,
+                            "ClientRegistrationDateSpecified": false,
+                            "ClientRegistrationApplicationReceivedDateSpecified": false,
+                            "ClientIdentityStrengthConfirmationDateSpecified": false,
+                            "ClientLastUpdatedByDateSpecified": false,
+                            "ClientLastUpdatedByTimeSpecified": false,
+                            "ClientTypeCode": "90",
+                            "ClientTypeEffectiveDateSpecified": false,
+                            "ClientTypeEndDateSpecified": false,
+                            "ClientTypeListAccessCodeSpecified": false,
+                            "ClientTypeViewAccessCodeSpecified": false,
+                            "ClientTypeAddAccessCodeSpecified": false,
+                            "ClientTypeModifyAccessCodeSpecified": false,
+                            "ClientEstablishmentDateSpecified": false,
+                            "RoleTypeCodeSpecified": false,
+                            "ClientIdentifiers": [
+                                {
+                                    "ClientIdentifierTypeCode": "15",
+                                    "ClientIdentifierValueID": "16221104",
+                                    "ClientIdentifierStartDateSpecified": false,
+                                    "ClientIdentifierEndDateSpecified": false,
+                                    "ClientAccountID": "05050145",
+                                    "ClientRoleTypeCode": "90",
+                                    "ClientIdentifierLastUpdatedDateSpecified": false,
+                                    "ClientIdentifierLastUpdatedTimeSpecified": false
+                                }
+                            ],
+                            "ClientAccount": [
+                                {
+                                    "ClientAccountLastUpdatedDateSpecified": false,
+                                    "ClientAccountLastUpdatedTimeSpecified": false,
+                                    "ClientAccountName": [
+                                        {
+                                            "ClientNameStartDateSpecified": false,
+                                            "ClientNameEndDateSpecified": false,
+                                            "ClientNameLastUpdatedDateSpecified": false,
+                                            "ClientNameLastUpdatedTimeSpecified": false,
+                                            "UnstructuredName": {
+                                                "ClientInternalID": "16226226",
+                                                "ClientNameTypeCode": "90",
+                                                "UnstructuredFullName": "Tony A ARTY",
+                                                "UnstructuredNameLine1": "Tony"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "Client": {
+                            "ClientInternalID": "16226227",
+                            "ClientEndDateSpecified": false,
+                            "ClientRegistrationDateSpecified": false,
+                            "ClientRegistrationApplicationReceivedDateSpecified": false,
+                            "ClientIdentityStrengthConfirmationDateSpecified": false,
+                            "ClientLastUpdatedByDateSpecified": false,
+                            "ClientLastUpdatedByTimeSpecified": false,
+                            "ClientTypeCode": "90",
+                            "ClientTypeEffectiveDateSpecified": false,
+                            "ClientTypeEndDateSpecified": false,
+                            "ClientTypeListAccessCodeSpecified": false,
+                            "ClientTypeViewAccessCodeSpecified": false,
+                            "ClientTypeAddAccessCodeSpecified": false,
+                            "ClientTypeModifyAccessCodeSpecified": false,
+                            "ClientEstablishmentDateSpecified": false,
+                            "RoleTypeCodeSpecified": false,
+                            "ClientIdentifiers": [
+                                {
+                                    "ClientIdentifierTypeCode": "15",
+                                    "ClientIdentifierValueID": "16221105",
+                                    "ClientIdentifierStartDateSpecified": false,
+                                    "ClientIdentifierEndDateSpecified": false,
+                                    "ClientAccountID": "05050145",
+                                    "ClientRoleTypeCode": "90",
+                                    "ClientIdentifierLastUpdatedDateSpecified": false,
+                                    "ClientIdentifierLastUpdatedTimeSpecified": false
+                                }
+                            ],
+                            "ClientAccount": [
+                                {
+                                    "ClientAccountLastUpdatedDateSpecified": false,
+                                    "ClientAccountLastUpdatedTimeSpecified": false,
+                                    "ClientAccountName": [
+                                        {
+                                            "ClientNameStartDateSpecified": false,
+                                            "ClientNameEndDateSpecified": false,
+                                            "ClientNameLastUpdatedDateSpecified": false,
+                                            "ClientNameLastUpdatedTimeSpecified": false,
+                                            "UnstructuredName": {
+                                                "ClientInternalID": "16226227",
+                                                "ClientNameTypeCode": "90",
+                                                "UnstructuredFullName": "FELICITY T SMITH",
+                                                "UnstructuredNameLine1": "Felicity"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "Client": {
+                    "ClientInternalID": "12345679",
+                    "ClientEndDateSpecified": false,
+                    "ClientEndReasonCode": "",
+                    "ClientRegistrationDateSpecified": false,
+                    "RegistrationReasonCode": "",
+                    "ClientRegistrationApplicationReceivedDateSpecified": false,
+                    "ClientUntraceableIndicator": "",
+                    "ClientIdentityStrengthCode": "",
+                    "ClientIdentityStrengthConfirmationDateSpecified": false,
+                    "ClientIdentityStrengthSourceCode": "",
+                    "ClientTransactionID": "",
+                    "ClientLastUpdatedByID": "",
+                    "ClientLastUpdatedByDateSpecified": false,
+                    "ClientLastUpdatedByTimeSpecified": false,
+                    "ClientLastUpdatedSourceCode": "",
+                    "ClientLastUpdatedReasonCode": "",
+                    "BusinessEndReasonCode": "",
+                    "BusinessEndReasonDecode": "",
+                    "BusinessEndReasonLongDescription": "",
+                    "ClientTypeCode": "90",
+                    "ClientTypeDecode": "",
+                    "ClientTypeEffectiveDateSpecified": false,
+                    "ClientTypeEndDateSpecified": false,
+                    "ClientTypeClientLinkLongDescription": "",
+                    "ClientTypeClientCategoryIndicator": "",
+                    "ClientTypeClientSubCategoryIndicator": "",
+                    "ClientTypeCommonwealthIndicator": "",
+                    "ClientTypeLocalIndicator": "",
+                    "ClientTypeStateIndicator": "",
+                    "ClientTypeTerritoryIndicator": "",
+                    "ClientTypeListAccessCodeSpecified": false,
+                    "ClientTypeViewAccessCodeSpecified": false,
+                    "ClientTypeAddAccessCodeSpecified": false,
+                    "ClientTypeModifyAccessCodeSpecified": false,
+                    "ClientEstablishmentDateSpecified": false,
+                    "RoleTypeCodeSpecified": false,
+                    "RoleTypeDecode": "",
+                    "ClientNoDataToOtherAgencyIndicator": "",
+                    "ClientEFTExemptIndicator": "",
+                    "ClientRegistrationSourceCode": "",
+                    "ClientFormTransactionID": "",
+                    "ClientLockdownIndicator": "",
+                    "ClientIdentifiers": [
+                        {
+                            "ClientInternalID": "",
+                            "ClientIdentifierTypeCode": "15",
+                            "ClientIdentifierTypeShortDecode": "",
+                            "ClientIdentifierTypeDecode": "",
+                            "ClientIdentifierValueID": "16226000",
+                            "ClientIdentifierOccurrenceNumber": "",
+                            "ClientIdentifierStartDateSpecified": false,
+                            "ClientIdentifierEndDateSpecified": false,
+                            "ClientIdentifierCompromisedIndicator": "",
+                            "ClientIdentifierPrimaryIndicator": "",
+                            "ClientIdentifierStatusCode": "",
+                            "ClientAccountID": "05050145",
+                            "ClientRoleTypeCode": "90",
+                            "ClientIdentifierTransactionID": "",
+                            "ClientIdentifierLastUpdatedByID": "",
+                            "ClientIdentifierLastUpdatedDateSpecified": false,
+                            "ClientIdentifierLastUpdatedTimeSpecified": false,
+                            "ClientIdentifierLastUpdatedSourceCode": "",
+                            "ClientIdentifierLastUpdatedReasonCode": "",
+                            "ClientIdentifierTypeLongDescription": "",
+                            "ClientIdentifierDIMAPersonID": ""
+                        }
+                    ],
+                    "ClientAccount": [
+                        {
+                            "ClientInternalID": "",
+                            "ClientAccountID": "",
+                            "ClientAccountTypeCode": "",
+                            "ClientAccountRBAIndicator": "",
+                            "ClientAccountSequenceNumber": "",
+                            "ClientAccountBusinessMainActivityDescription": "",
+                            "BusinessMainIndustryCode": "",
+                            "ClientAccountAustralianNewZealandStandardIndustryCode": "",
+                            "ClientAccountTransactionID": "",
+                            "ClientAccountLastUpdatedByID": "",
+                            "ClientAccountLastUpdatedDateSpecified": false,
+                            "ClientAccountLastUpdatedTimeSpecified": false,
+                            "ClientAccountLastUpdatedSourceCode": "",
+                            "ClientAccountLastUpdatedReasonCode": "",
+                            "InsolvencyTypeCode": "",
+                            "LostMemberRegisterRoleCount": "",
+                            "ClientAccountName": [
+                                {
+                                    "ClientInternalID": "",
+                                    "ClientNameTypeCode": "",
+                                    "ClientNameSequenceNumber": "",
+                                    "ClientNameStartDateSpecified": false,
+                                    "ClientNameEndDateSpecified": false,
+                                    "ClientAccountID": "",
+                                    "ClientNameStatusCode": "",
+                                    "ClientRoleTypeCode": "",
+                                    "ClientNameLastUpdatedByID": "",
+                                    "ClientNameLastUpdatedDateSpecified": false,
+                                    "ClientNameLastUpdatedTimeSpecified": false,
+                                    "ClientNameLastUpdatedSourceCode": "",
+                                    "ClientNameLastUpdatedReasonCode": "",
+                                    "ClientNameTypeDecode": "",
+                                    "ClientNameTransactionID": "",
+                                    "ClientNamePrimaryIndicator": "",
+                                    "UnstructuredName": {
+                                        "ClientInternalID": "16226000",
+                                        "ClientNameSequenceNumber": "",
+                                        "ClientNameTypeCode": "90",
+                                        "UnstructuredFullName": "GUY A BAKER",
+                                        "UnstructuredNameLine1": "Doghoz",
+                                        "UnstructuredNameLine2": "",
+                                        "UnstructuredOrganisationName": ""
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "ClientIdentifierTaxAgentCount": "3",
+                "ActiveRanDetails": [
+                    {
+                        "Client": {
+                            "ClientInternalID": "16226000",
+                            "ClientEndDateSpecified": false,
+                            "ClientEndReasonCode": "",
+                            "ClientRegistrationDateSpecified": false,
+                            "RegistrationReasonCode": "",
+                            "ClientRegistrationApplicationReceivedDateSpecified": false,
+                            "ClientUntraceableIndicator": "",
+                            "ClientIdentityStrengthCode": "",
+                            "ClientIdentityStrengthConfirmationDateSpecified": false,
+                            "ClientIdentityStrengthSourceCode": "",
+                            "ClientTransactionID": "",
+                            "ClientLastUpdatedByID": "",
+                            "ClientLastUpdatedByDateSpecified": false,
+                            "ClientLastUpdatedByTimeSpecified": false,
+                            "ClientLastUpdatedSourceCode": "",
+                            "ClientLastUpdatedReasonCode": "",
+                            "BusinessEndReasonCode": "",
+                            "BusinessEndReasonDecode": "",
+                            "BusinessEndReasonLongDescription": "",
+                            "ClientTypeCode": "90",
+                            "ClientTypeDecode": "",
+                            "ClientTypeEffectiveDateSpecified": false,
+                            "ClientTypeEndDateSpecified": false,
+                            "ClientTypeClientLinkLongDescription": "",
+                            "ClientTypeClientCategoryIndicator": "",
+                            "ClientTypeClientSubCategoryIndicator": "",
+                            "ClientTypeCommonwealthIndicator": "",
+                            "ClientTypeLocalIndicator": "",
+                            "ClientTypeStateIndicator": "",
+                            "ClientTypeTerritoryIndicator": "",
+                            "ClientTypeListAccessCodeSpecified": false,
+                            "ClientTypeViewAccessCodeSpecified": false,
+                            "ClientTypeAddAccessCodeSpecified": false,
+                            "ClientTypeModifyAccessCodeSpecified": false,
+                            "ClientEstablishmentDateSpecified": false,
+                            "RoleTypeCodeSpecified": false,
+                            "RoleTypeDecode": "",
+                            "ClientNoDataToOtherAgencyIndicator": "",
+                            "ClientEFTExemptIndicator": "",
+                            "ClientRegistrationSourceCode": "",
+                            "ClientFormTransactionID": "",
+                            "ClientLockdownIndicator": "",
+                            "ClientIdentifiers": [
+                                {
+                                    "ClientInternalID": "",
+                                    "ClientIdentifierTypeCode": "15",
+                                    "ClientIdentifierTypeShortDecode": "",
+                                    "ClientIdentifierTypeDecode": "",
+                                    "ClientIdentifierValueID": "16226000",
+                                    "ClientIdentifierOccurrenceNumber": "",
+                                    "ClientIdentifierStartDateSpecified": false,
+                                    "ClientIdentifierEndDateSpecified": false,
+                                    "ClientIdentifierCompromisedIndicator": "",
+                                    "ClientIdentifierPrimaryIndicator": "",
+                                    "ClientIdentifierStatusCode": "",
+                                    "ClientAccountID": "05050145",
+                                    "ClientRoleTypeCode": "90",
+                                    "ClientIdentifierTransactionID": "",
+                                    "ClientIdentifierLastUpdatedByID": "",
+                                    "ClientIdentifierLastUpdatedDateSpecified": false,
+                                    "ClientIdentifierLastUpdatedTimeSpecified": false,
+                                    "ClientIdentifierLastUpdatedSourceCode": "",
+                                    "ClientIdentifierLastUpdatedReasonCode": "",
+                                    "ClientIdentifierTypeLongDescription": "",
+                                    "ClientIdentifierDIMAPersonID": ""
+                                }
+                            ],
+                            "ClientAccount": [
+                                {
+                                    "ClientInternalID": "",
+                                    "ClientAccountID": "",
+                                    "ClientAccountTypeCode": "",
+                                    "ClientAccountRBAIndicator": "",
+                                    "ClientAccountSequenceNumber": "",
+                                    "ClientAccountBusinessMainActivityDescription": "",
+                                    "BusinessMainIndustryCode": "",
+                                    "ClientAccountAustralianNewZealandStandardIndustryCode": "",
+                                    "ClientAccountTransactionID": "",
+                                    "ClientAccountLastUpdatedByID": "",
+                                    "ClientAccountLastUpdatedDateSpecified": false,
+                                    "ClientAccountLastUpdatedTimeSpecified": false,
+                                    "ClientAccountLastUpdatedSourceCode": "",
+                                    "ClientAccountLastUpdatedReasonCode": "",
+                                    "InsolvencyTypeCode": "",
+                                    "LostMemberRegisterRoleCount": "",
+                                    "ClientAccountName": [
+                                        {
+                                            "ClientInternalID": "",
+                                            "ClientNameTypeCode": "",
+                                            "ClientNameSequenceNumber": "",
+                                            "ClientNameStartDateSpecified": false,
+                                            "ClientNameEndDateSpecified": false,
+                                            "ClientAccountID": "",
+                                            "ClientNameStatusCode": "",
+                                            "ClientRoleTypeCode": "",
+                                            "ClientNameLastUpdatedByID": "",
+                                            "ClientNameLastUpdatedDateSpecified": false,
+                                            "ClientNameLastUpdatedTimeSpecified": false,
+                                            "ClientNameLastUpdatedSourceCode": "",
+                                            "ClientNameLastUpdatedReasonCode": "",
+                                            "ClientNameTypeDecode": "",
+                                            "ClientNameTransactionID": "",
+                                            "ClientNamePrimaryIndicator": "",
+                                            "UnstructuredName": {
+                                                "ClientInternalID": "16226000",
+                                                "ClientNameSequenceNumber": "",
+                                                "ClientNameTypeCode": "90",
+                                                "UnstructuredFullName": "GUY B BAKER",
+                                                "UnstructuredNameLine1": "Doghoz",
+                                                "UnstructuredNameLine2": "",
+                                                "UnstructuredOrganisationName": ""
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "Client": {
+                    "ClientInternalID": "12345679",
+                    "ClientEndDateSpecified": false,
+                    "ClientEndReasonCode": "",
+                    "ClientRegistrationDateSpecified": false,
+                    "RegistrationReasonCode": "",
+                    "ClientRegistrationApplicationReceivedDateSpecified": false,
+                    "ClientUntraceableIndicator": "",
+                    "ClientIdentityStrengthCode": "",
+                    "ClientIdentityStrengthConfirmationDateSpecified": false,
+                    "ClientIdentityStrengthSourceCode": "",
+                    "ClientTransactionID": "",
+                    "ClientLastUpdatedByID": "",
+                    "ClientLastUpdatedByDateSpecified": false,
+                    "ClientLastUpdatedByTimeSpecified": false,
+                    "ClientLastUpdatedSourceCode": "",
+                    "ClientLastUpdatedReasonCode": "",
+                    "BusinessEndReasonCode": "",
+                    "BusinessEndReasonDecode": "",
+                    "BusinessEndReasonLongDescription": "",
+                    "ClientTypeCode": "90",
+                    "ClientTypeDecode": "",
+                    "ClientTypeEffectiveDateSpecified": false,
+                    "ClientTypeEndDateSpecified": false,
+                    "ClientTypeClientLinkLongDescription": "",
+                    "ClientTypeClientCategoryIndicator": "",
+                    "ClientTypeClientSubCategoryIndicator": "",
+                    "ClientTypeCommonwealthIndicator": "",
+                    "ClientTypeLocalIndicator": "",
+                    "ClientTypeStateIndicator": "",
+                    "ClientTypeTerritoryIndicator": "",
+                    "ClientTypeListAccessCodeSpecified": false,
+                    "ClientTypeViewAccessCodeSpecified": false,
+                    "ClientTypeAddAccessCodeSpecified": false,
+                    "ClientTypeModifyAccessCodeSpecified": false,
+                    "ClientEstablishmentDateSpecified": false,
+                    "RoleTypeCodeSpecified": false,
+                    "RoleTypeDecode": "",
+                    "ClientNoDataToOtherAgencyIndicator": "",
+                    "ClientEFTExemptIndicator": "",
+                    "ClientRegistrationSourceCode": "",
+                    "ClientFormTransactionID": "",
+                    "ClientLockdownIndicator": "",
+                    "ClientIdentifiers": [
+                        {
+                            "ClientInternalID": "",
+                            "ClientIdentifierTypeCode": "10",
+                            "ClientIdentifierTypeShortDecode": "",
+                            "ClientIdentifierTypeDecode": "",
+                            "ClientIdentifierValueID": "11879050113",
+                            "ClientIdentifierOccurrenceNumber": "",
+                            "ClientIdentifierStartDateSpecified": false,
+                            "ClientIdentifierEndDateSpecified": false,
+                            "ClientIdentifierCompromisedIndicator": "",
+                            "ClientIdentifierPrimaryIndicator": "",
+                            "ClientIdentifierStatusCode": "",
+                            "ClientAccountID": "05050145",
+                            "ClientRoleTypeCode": "90",
+                            "ClientIdentifierTransactionID": "",
+                            "ClientIdentifierLastUpdatedByID": "",
+                            "ClientIdentifierLastUpdatedDateSpecified": false,
+                            "ClientIdentifierLastUpdatedTimeSpecified": false,
+                            "ClientIdentifierLastUpdatedSourceCode": "",
+                            "ClientIdentifierLastUpdatedReasonCode": "",
+                            "ClientIdentifierTypeLongDescription": "",
+                            "ClientIdentifierDIMAPersonID": ""
+                        }
+                    ],
+                    "ClientAccount": [
+                        {
+                            "ClientInternalID": "",
+                            "ClientAccountID": "",
+                            "ClientAccountTypeCode": "",
+                            "ClientAccountRBAIndicator": "",
+                            "ClientAccountSequenceNumber": "",
+                            "ClientAccountBusinessMainActivityDescription": "",
+                            "BusinessMainIndustryCode": "",
+                            "ClientAccountAustralianNewZealandStandardIndustryCode": "",
+                            "ClientAccountTransactionID": "",
+                            "ClientAccountLastUpdatedByID": "",
+                            "ClientAccountLastUpdatedDateSpecified": false,
+                            "ClientAccountLastUpdatedTimeSpecified": false,
+                            "ClientAccountLastUpdatedSourceCode": "",
+                            "ClientAccountLastUpdatedReasonCode": "",
+                            "InsolvencyTypeCode": "",
+                            "LostMemberRegisterRoleCount": "",
+                            "ClientAccountName": [
+                                {
+                                    "ClientInternalID": "",
+                                    "ClientNameTypeCode": "",
+                                    "ClientNameSequenceNumber": "",
+                                    "ClientNameStartDateSpecified": false,
+                                    "ClientNameEndDateSpecified": false,
+                                    "ClientAccountID": "",
+                                    "ClientNameStatusCode": "",
+                                    "ClientRoleTypeCode": "",
+                                    "ClientNameLastUpdatedByID": "",
+                                    "ClientNameLastUpdatedDateSpecified": false,
+                                    "ClientNameLastUpdatedTimeSpecified": false,
+                                    "ClientNameLastUpdatedSourceCode": "",
+                                    "ClientNameLastUpdatedReasonCode": "",
+                                    "ClientNameTypeDecode": "",
+                                    "ClientNameTransactionID": "",
+                                    "ClientNamePrimaryIndicator": "",
+                                    "UnstructuredName": {
+                                        "ClientInternalID": "16226000",
+                                        "ClientNameSequenceNumber": "",
+                                        "ClientNameTypeCode": "90",
+                                        "UnstructuredFullName": "GUY A BAKER",
+                                        "UnstructuredNameLine1": "Doghoz",
+                                        "UnstructuredNameLine2": "",
+                                        "UnstructuredOrganisationName": ""
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "ClientIdentifierTaxAgentCount": "3",
+                "ActiveRanDetails": [
+                    {
+                        "Client": {
+                            "ClientInternalID": "16226000",
+                            "ClientEndDateSpecified": false,
+                            "ClientEndReasonCode": "",
+                            "ClientRegistrationDateSpecified": false,
+                            "RegistrationReasonCode": "",
+                            "ClientRegistrationApplicationReceivedDateSpecified": false,
+                            "ClientUntraceableIndicator": "",
+                            "ClientIdentityStrengthCode": "",
+                            "ClientIdentityStrengthConfirmationDateSpecified": false,
+                            "ClientIdentityStrengthSourceCode": "",
+                            "ClientTransactionID": "",
+                            "ClientLastUpdatedByID": "",
+                            "ClientLastUpdatedByDateSpecified": false,
+                            "ClientLastUpdatedByTimeSpecified": false,
+                            "ClientLastUpdatedSourceCode": "",
+                            "ClientLastUpdatedReasonCode": "",
+                            "BusinessEndReasonCode": "",
+                            "BusinessEndReasonDecode": "",
+                            "BusinessEndReasonLongDescription": "",
+                            "ClientTypeCode": "90",
+                            "ClientTypeDecode": "",
+                            "ClientTypeEffectiveDateSpecified": false,
+                            "ClientTypeEndDateSpecified": false,
+                            "ClientTypeClientLinkLongDescription": "",
+                            "ClientTypeClientCategoryIndicator": "",
+                            "ClientTypeClientSubCategoryIndicator": "",
+                            "ClientTypeCommonwealthIndicator": "",
+                            "ClientTypeLocalIndicator": "",
+                            "ClientTypeStateIndicator": "",
+                            "ClientTypeTerritoryIndicator": "",
+                            "ClientTypeListAccessCodeSpecified": false,
+                            "ClientTypeViewAccessCodeSpecified": false,
+                            "ClientTypeAddAccessCodeSpecified": false,
+                            "ClientTypeModifyAccessCodeSpecified": false,
+                            "ClientEstablishmentDateSpecified": false,
+                            "RoleTypeCodeSpecified": false,
+                            "RoleTypeDecode": "",
+                            "ClientNoDataToOtherAgencyIndicator": "",
+                            "ClientEFTExemptIndicator": "",
+                            "ClientRegistrationSourceCode": "",
+                            "ClientFormTransactionID": "",
+                            "ClientLockdownIndicator": "",
+                            "ClientIdentifiers": [
+                                {
+                                    "ClientInternalID": "",
+                                    "ClientIdentifierTypeCode": "15",
+                                    "ClientIdentifierTypeShortDecode": "",
+                                    "ClientIdentifierTypeDecode": "",
+                                    "ClientIdentifierValueID": "16226000",
+                                    "ClientIdentifierOccurrenceNumber": "",
+                                    "ClientIdentifierStartDateSpecified": false,
+                                    "ClientIdentifierEndDateSpecified": false,
+                                    "ClientIdentifierCompromisedIndicator": "",
+                                    "ClientIdentifierPrimaryIndicator": "",
+                                    "ClientIdentifierStatusCode": "",
+                                    "ClientAccountID": "05050145",
+                                    "ClientRoleTypeCode": "90",
+                                    "ClientIdentifierTransactionID": "",
+                                    "ClientIdentifierLastUpdatedByID": "",
+                                    "ClientIdentifierLastUpdatedDateSpecified": false,
+                                    "ClientIdentifierLastUpdatedTimeSpecified": false,
+                                    "ClientIdentifierLastUpdatedSourceCode": "",
+                                    "ClientIdentifierLastUpdatedReasonCode": "",
+                                    "ClientIdentifierTypeLongDescription": "",
+                                    "ClientIdentifierDIMAPersonID": ""
+                                }
+                            ],
+                            "ClientAccount": [
+                                {
+                                    "ClientInternalID": "",
+                                    "ClientAccountID": "",
+                                    "ClientAccountTypeCode": "",
+                                    "ClientAccountRBAIndicator": "",
+                                    "ClientAccountSequenceNumber": "",
+                                    "ClientAccountBusinessMainActivityDescription": "",
+                                    "BusinessMainIndustryCode": "",
+                                    "ClientAccountAustralianNewZealandStandardIndustryCode": "",
+                                    "ClientAccountTransactionID": "",
+                                    "ClientAccountLastUpdatedByID": "",
+                                    "ClientAccountLastUpdatedDateSpecified": false,
+                                    "ClientAccountLastUpdatedTimeSpecified": false,
+                                    "ClientAccountLastUpdatedSourceCode": "",
+                                    "ClientAccountLastUpdatedReasonCode": "",
+                                    "InsolvencyTypeCode": "",
+                                    "LostMemberRegisterRoleCount": "",
+                                    "ClientAccountName": [
+                                        {
+                                            "ClientInternalID": "",
+                                            "ClientNameTypeCode": "",
+                                            "ClientNameSequenceNumber": "",
+                                            "ClientNameStartDateSpecified": false,
+                                            "ClientNameEndDateSpecified": false,
+                                            "ClientAccountID": "",
+                                            "ClientNameStatusCode": "",
+                                            "ClientRoleTypeCode": "",
+                                            "ClientNameLastUpdatedByID": "",
+                                            "ClientNameLastUpdatedDateSpecified": false,
+                                            "ClientNameLastUpdatedTimeSpecified": false,
+                                            "ClientNameLastUpdatedSourceCode": "",
+                                            "ClientNameLastUpdatedReasonCode": "",
+                                            "ClientNameTypeDecode": "",
+                                            "ClientNameTransactionID": "",
+                                            "ClientNamePrimaryIndicator": "",
+                                            "UnstructuredName": {
+                                                "ClientInternalID": "16226000",
+                                                "ClientNameSequenceNumber": "",
+                                                "ClientNameTypeCode": "90",
+                                                "UnstructuredFullName": "GUY B BAKER",
+                                                "UnstructuredNameLine1": "Doghoz",
+                                                "UnstructuredNameLine2": "",
+                                                "UnstructuredOrganisationName": ""
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

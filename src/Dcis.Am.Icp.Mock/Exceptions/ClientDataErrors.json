@@ -1,0 +1,482 @@
+[
+  {
+    "Code": 11008,
+    "Message": "Account Id not in table.",
+    "Severity": 1
+  },
+  {
+    "Code": 11020,
+    "Message": "Client not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 11054,
+    "Message": "Record not found for the entered identifier.",
+    "Severity": 1
+  },
+  {
+    "Code": 11094,
+    "Message": "Account End Date is required if Business Type is 'Special Event'.",
+    "Severity": 1
+  },
+  {
+    "Code": 11121,
+    "Message": "The input Id may not be set to inactive as the client will not have a Primary Id ",
+    "Severity": 1
+  },
+  {
+    "Code": 14002,
+    "Message": "Period Start Date is required.",
+    "Severity": 1
+  },
+  {
+    "Code": 14036,
+    "Message": "Effective Date is invalid.",
+    "Severity": 1
+  },
+  {
+    "Code": 14079,
+    "Message": "The Internal Id does not exist.",
+    "Severity": 1
+  },
+  {
+    "Code": 14087,
+    "Message": "Record not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 14160,
+    "Message": "Multiple rows returned.",
+    "Severity": 1
+  },
+  {
+    "Code": 16009,
+    "Message": "Form Id not found for Form Type and Period.",
+    "Severity": 1
+  },
+  {
+    "Code": 18029,
+    "Message": "Multiple Clients found for Id entered.  Please enter all Id information to select correct Client.",
+    "Severity": 1
+  },
+  {
+    "Code": 18055,
+    "Message": "Account Id is not supplied.",
+    "Severity": 1
+  },
+  {
+    "Code": 18760,
+    "Message": "Codes Table not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 25233,
+    "Message": "A Role type is required.",
+    "Severity": 1
+  },
+  {
+    "Code": 39997,
+    "Message": "The Account Id is required.",
+    "Severity": 1
+  },
+  {
+    "Code": 40002,
+    "Message": "External Id is populated and Id Type is not populated.",
+    "Severity": 1
+  },
+  {
+    "Code": 40009,
+    "Message": "Unexpected Date error.",
+    "Severity": 1
+  },
+  {
+    "Code": 40078,
+    "Message": "End Date must be a valid date.",
+    "Severity": 1
+  },
+  {
+    "Code": 40108,
+    "Message": "Internal Id missing.",
+    "Severity": 1
+  },
+  {
+    "Code": 40114,
+    "Message": "Invalid input entered",
+    "Severity": 1
+  },
+  {
+    "Code": 40119,
+    "Message": "Link Type does not exist. ",
+    "Severity": 1
+  },
+  {
+    "Code": 40122,
+    "Message": "Record not found for the related entity.",
+    "Severity": 1
+  },
+  {
+    "Code": 40190,
+    "Message": "Client Id is required.",
+    "Severity": 1
+  },
+  {
+    "Code": 40191,
+    "Message": "Client Id Type is required.",
+    "Severity": 1
+  },
+  {
+    "Code": 40193,
+    "Message": "A numeric Link Type is required.",
+    "Severity": 1
+  },
+  {
+    "Code": 40198,
+    "Message": "More records exist than listed.",
+    "Severity": 3
+  },
+  {
+    "Code": 40199,
+    "Message": "No client security details recorded for client.",
+    "Severity": 1
+  },
+  {
+    "Code": 40203,
+    "Message": "The Client Security Details code (classification) provided is not one of the codes on the corresponding codes table.",
+    "Severity": 1
+  },
+  {
+    "Code": 40205,
+    "Message": "At least one of the inputs required for the validation was not supplied.",
+    "Severity": 1
+  },
+  {
+    "Code": 40241,
+    "Message": "The Account Type must be a valid value for the given Role Type.",
+    "Severity": 1
+  },
+  {
+    "Code": 40255,
+    "Message": "External Id Type not populated.",
+    "Severity": 1
+  },
+  {
+    "Code": 40500,
+    "Message": "No records were found.",
+    "Severity": 1
+  },
+  {
+    "Code": 40505,
+    "Message": "Role Type is blank.",
+    "Severity": 1
+  },
+  {
+    "Code": 40544,
+    "Message": "Internal Id found is in the past.",
+    "Severity": 1
+  },
+  {
+    "Code": 40545,
+    "Message": "Internal Id found is in the future.",
+    "Severity": 1
+  },
+  {
+    "Code": 40690,
+    "Message": "Existing name not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 41301,
+    "Message": "Invalid Next Key. Page not found.",
+    "Severity": 3
+  },
+  {
+    "Code": 48105,
+    "Message": "Account Id is required.",
+    "Severity": 1
+  },
+  {
+    "Code": 50012,
+    "Message": "Fatal DB2 error encountered.",
+    "Severity": 1
+  },
+  {
+    "Code": 50014,
+    "Message": "Process details not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 50015,
+    "Message": "Process is not available for use.",
+    "Severity": 1
+  },
+  {
+    "Code": 50020,
+    "Message": "Process-Id is blank.",
+    "Severity": 1
+  },
+  {
+    "Code": 50021,
+    "Message": "Run-Id is blank.",
+    "Severity": 1
+  },
+  {
+    "Code": 50022,
+    "Message": "Process-Type must be a valid value.",
+    "Severity": 1
+  },
+  {
+    "Code": 50023,
+    "Message": "End-of-run indicator must be a valid value.",
+    "Severity": 1
+  },
+  {
+    "Code": 50024,
+    "Message": "Correl-Process-Id is blank.",
+    "Severity": 1
+  },
+  {
+    "Code": 50025,
+    "Message": "Correl-Run-Id is blank.",
+    "Severity": 1
+  },
+  {
+    "Code": 50026,
+    "Message": "Control-Item-Tag is blank.",
+    "Severity": 1
+  },
+  {
+    "Code": 50028,
+    "Message": "Control-Item-Tag must be a valid value.",
+    "Severity": 1
+  },
+  {
+    "Code": 50032,
+    "Message": "Correlated Process information is not blank.",
+    "Severity": 1
+  },
+  {
+    "Code": 50034,
+    "Message": "MQ Open failed.",
+    "Severity": 1
+  },
+  {
+    "Code": 50036,
+    "Message": "No MQ reply message received.",
+    "Severity": 1
+  },
+  {
+    "Code": 50037,
+    "Message": "MQ reply message too long.",
+    "Severity": 1
+  },
+  {
+    "Code": 50038,
+    "Message": "MQ Get failed.",
+    "Severity": 1
+  },
+  {
+    "Code": 50039,
+    "Message": "Proc-Ctrl is not Open nor Partially-Reconciled.",
+    "Severity": 1
+  },
+  {
+    "Code": 50062,
+    "Message": "Invalid Service COD Parameters",
+    "Severity": 1
+  },
+  {
+    "Code": 50063,
+    "Message": "Invalid Service COD Type",
+    "Severity": 1
+  },
+  {
+    "Code": 50065,
+    "Message": "MQ API MQPUT failure",
+    "Severity": 1
+  },
+  {
+    "Code": 50100,
+    "Message": "An FDF required field is empty (null).",
+    "Severity": 1
+  },
+  {
+    "Code": 50128,
+    "Message": "User Id not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 50132,
+    "Message": "Warning returned from MQCONN.",
+    "Severity": 1
+  },
+  {
+    "Code": 50134,
+    "Message": "Warning returned from MQCONN.",
+    "Severity": 1
+  },
+  {
+    "Code": 50135,
+    "Message": "Unknown result returned from MQCONN.",
+    "Severity": 1
+  },
+  {
+    "Code": 50136,
+    "Message": "Error retrieving Service details.",
+    "Severity": 1
+  },
+  {
+    "Code": 50138,
+    "Message": "Unable to validate Id Type.",
+    "Severity": 1
+  },
+  {
+    "Code": 50144,
+    "Message": "No valid setting defined for the Service Data-Level-Security.",
+    "Severity": 1
+  },
+  {
+    "Code": 50145,
+    "Message": "No valid setting defined for the Service User-Security-Classification.",
+    "Severity": 1
+  },
+  {
+    "Code": 50146,
+    "Message": "No valid setting defined for the Service Cross-Entity-Authority.",
+    "Severity": 1
+  },
+  {
+    "Code": 50147,
+    "Message": "You are not authorised to change this data.",
+    "Severity": 1
+  },
+  {
+    "Code": 50148,
+    "Message": "You are not authorised to view this client.",
+    "Severity": 1
+  },
+  {
+    "Code": 50151,
+    "Message": "Logical Service Name not found for a 'secondary' OL module call.",
+    "Severity": 1
+  },
+  {
+    "Code": 51057,
+    "Message": "Error retrieving system date/time.",
+    "Severity": 1
+  },
+  {
+    "Code": 59010,
+    "Message": "The operation has attempted to find the instance that matches the imported identifier. The instance was not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 60016,
+    "Message": "The Date format for Date Conversion is incorrect.",
+    "Severity": 1
+  },
+  {
+    "Code": 60021,
+    "Message": "Number of Payments exceeds the number allowed.",
+    "Severity": 1
+  },
+  {
+    "Code": 60025,
+    "Message": "The Invoke input Trans-Id is zero.",
+    "Severity": 1
+  },
+  {
+    "Code": 60117,
+    "Message": "Client Internal Id is required.",
+    "Severity": 1
+  },
+  {
+    "Code": 61003,
+    "Message": "Get Form process failed.",
+    "Severity": 1
+  },
+  {
+    "Code": 61023,
+    "Message": "Mode is invalid.",
+    "Severity": 1
+  },
+  {
+    "Code": 61047,
+    "Message": "Insufficient user security level to continue processing.",
+    "Severity": 1
+  },
+  {
+    "Code": 61048,
+    "Message": "Form Type must be a valid value.",
+    "Severity": 1
+  },
+  {
+    "Code": 61050,
+    "Message": "The Role is not applicable.",
+    "Severity": 1
+  },
+  {
+    "Code": 61051,
+    "Message": "Section group code was not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 61052,
+    "Message": "Form Id was not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 61057,
+    "Message": "Deferred GST Information not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 61058,
+    "Message": "Form Sub-Type not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 61059,
+    "Message": "Source code not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 61086,
+    "Message": "No payment application details found.",
+    "Severity": 1
+  },
+  {
+    "Code": 61104,
+    "Message": "Client Security Data is invalid.",
+    "Severity": 1
+  },
+  {
+    "Code": 61116,
+    "Message": "Multiple identifiers were provided for a single request",
+    "Severity": 1
+  },
+  {
+    "Code": 61120,
+    "Message": "Specified Transaction Id not found.",
+    "Severity": 1
+  },
+  {
+    "Code": 61328,
+    "Message": " For a given security attributes only Internal Users can be a Super Users",
+    "Severity": 1
+  },
+  {
+    "Code": 75059,
+    "Message": "External Id must be a valid value.",
+    "Severity": 1
+  },
+  {
+    "Code": 91993,
+    "Message": "Request is not valid.",
+    "Severity": 1
+  },
+  {
+    "Code": 96476,
+    "Message": "One or more requested names not found.",
+    "Severity": 1
+  }
+]

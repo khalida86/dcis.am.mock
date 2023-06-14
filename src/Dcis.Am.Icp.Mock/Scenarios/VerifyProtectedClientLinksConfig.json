@@ -1,0 +1,949 @@
+﻿/*
+ * AP353 Service Description - Verify Subject Client Links:
+ * http://sharepoint/PROD_LIB/Production_Documents/AP353%20Service%20Description%20-%20Verify%20Subject%20Client%20Links.doc?web=1
+ */
+
+{
+  "Scenarios": {
+    "VerifyProtectedClientLinks": [
+      // INDIVIDUALS
+      {
+        "Title": "Individual - TFN 879098302 - Has link to other identifier",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/ AuthenticatedClient/ClientIdentifierTypeCode",
+              "Value": "5"
+            },
+            {
+              "Path": "*/AuthenticatedClient/ClientIdentifierValueID",
+              "Value": "879098302"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "879098302",
+            "ClientIdentifierTypeCode": "5"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00",
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Individual - TFN Begins with '9' - Has link to other identifier",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/ AuthenticatedClient/ClientIdentifierTypeCode",
+              "Value": "5"
+            },
+            {
+              "Path": "*/AuthenticatedClient/ClientIdentifierValueID",
+              "Value": "<^9\\d+>"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "5"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00",
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Individual - TFN 879098303 - Does not have link to other identifier",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedClient/ClientIdentifierTypeCode",
+              "Value": "5"
+            },
+            {
+              "Path": "*/AuthenticatedClient/ClientIdentifierValueID",
+              "Value": "879098303"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "ProcessMessages": [
+
+            {
+              "MessageCode": 40119
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Individual - CID 87909830211 - Internal Id matched to an existing LinkID",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedClient/ClientInternalID",
+              "Value": "87909830211"
+            },
+            {
+              "Path": "*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID",
+              "Value": "ABC123"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {},
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "87909830211"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "87909830211",
+                  "SelectedClientTypeCode": "500",
+                  "SelectedClientId": "ABC123"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Individual - CID 87909830300 - Does not have link to other identifier",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedClient/ClientInternalID",
+              "Value": "87909830300"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "ProcessMessage": {
+            "MessageCode": 40119
+          }
+        }
+      },
+
+      // INTERMEDIARY
+      {
+        "Title": "Registered Agent - 33110033 - with RAN link as BAS Agent - no clients",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110033"
+            },
+            {
+              "Path": "*/SubjectClientCount",
+              "Value": "0"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110033",
+            "ClientAccountID": "1234567833",
+            "ClientRoleTypeCode": "95"
+          }
+        }
+      },
+      {
+        // Important - this scenario must be before 'Registered Agent - 33110033 - with RAN link as BAS Agent' 
+        "Title": "Registered Agent - 33110033 - with RAN link as BAS Agent (using ClientInternalId 1354178580000)",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedClient/ClientInternalID",
+              "Value": "1354178580000"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110033"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientInternalID": "<*/AuthenticatedClient/ClientInternalID>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientInternalID>",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110033",
+            "ClientAccountID": "1234567833",
+            "ClientRoleTypeCode": "95"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00", //selected client id plus 2 zeros
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110033 - with RAN link as BAS Agent",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110033"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110033",
+            "ClientAccountID": "1234567833",
+            "ClientRoleTypeCode": "95"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00", //selected client id plus 2 zeros
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110099 - with RAN link as TAX Agent - No clients",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110099"
+            },
+            {
+              "Path": "*/SubjectClientCount",
+              "Value": "0"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110099",
+            "ClientAccountID": "1234567899",
+            "ClientRoleTypeCode": "90"
+          }
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110099 - with RAN link as TAX Agent",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110099"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110099",
+            "ClientAccountID": "1234567899",
+            "ClientRoleTypeCode": "90"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00", //selected client id plus 2 zeros
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110055 - with RAN link as Tax Agent but no access to client",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110055"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110055",
+            "ClientAccountID": "1234567855",
+            "ClientRoleTypeCode": "90"
+          },
+          "SubjectClientList": {}
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110056 - with RAN link as BAS Agent but no access to client",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110056"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110056",
+            "ClientAccountID": "1234567856",
+            "ClientRoleTypeCode": "95"
+          },
+          "SubjectClientList": {}
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110077 - with RAN link as Tax Agent but wrong client internal id",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110077"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "9876543210",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110077",
+            "ClientAccountID": "12345678",
+            "ClientRoleTypeCode": "90"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00", //selected client id plus 2 zeros
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110000 - no RAN link",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110000"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "ProcessMessage": {
+            "MessageCode": 11020
+          }
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110331 - with RAN link as BAS Agent but no access to client",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110331"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00", // internal id of the authenticatedClient id above
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110331", // RAN/TAN
+            "ClientAccountID": "12345678331",
+            "ClientRoleTypeCode": "95" // TAG AGENT 90 or BAS AGENT INDICATOR 95
+          }
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110332 - with RAN link as Tax Agent but no access to client",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110332"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00", // internal id of the authenticatedClient id above
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110332", // RAN/TAN
+            "ClientAccountID": "101105569329",
+            "ClientRoleTypeCode": "90" // TAG AGENT 90 or BAS AGENT INDICATOR 95
+          }
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110111 - with RAN link as Tax Agent and access to PROTECTED client",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110111"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00", // internal id of the authenticatedClient id above
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110111", // RAN/TAN
+            "ClientAccountID": "12345678",
+            "ClientRoleTypeCode": "90" // TAG AGENT 90 or BAS AGENT INDICATOR 95
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00", //selected client id plus 2 zeros
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ],
+              "ClientLinks": [
+                {
+                  "ClientLinkTypeCode": "100"
+                }
+              ],
+              "ClientSecurity": {
+                "ClassificationCode": "50" // 50 is protected
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110299 - TAG with Payroll Provider client",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110299"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00", // internal id of the authenticatedClient id above
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110299",
+            "ClientAccountID": "1234567299",
+            "ClientRoleTypeCode": "90"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00", //selected client id plus 2 zeros
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ],
+              "ClientLinks": [
+                {
+                  "ClientLinkTypeCode": "642" // Payroll Provider
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110233 - BAS with Payroll Provider client",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110233"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00", // internal id of the authenticatedClient id above
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110233",
+            "ClientAccountID": "1234567233",
+            "ClientRoleTypeCode": "95"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00", //selected client id plus 2 zeros
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ],
+              "ClientLinks": [
+                {
+                  "ClientLinkTypeCode": "642" // Payroll Provider
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Registered Agent - 33110100 - Lookup subscriber as BAS, no linked ABN from ClientDetails",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33110100"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33110100",
+            "ClientAccountID": "12345678010",
+            "ClientRoleTypeCode": "95"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00", //selected client id plus 2 zeros
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "DSP Employee - 12345678909 - Payer-Payee link",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/ClientLink",
+              "Value": "640"
+            },
+            {
+              "Path": "*/AuthenticatedClient/ClientIdentifierTypeCode",
+              "Value": "10"
+            },
+            {
+              "Path": "*/AuthenticatedClient/ClientIdentifierValueID",
+              "Value": "12345678909"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00" // internal id of the authenticatedClient id above
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00", //selected client id plus 2 zeros
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ],
+              "ClientLinks": [
+                {
+                  "ClientLinkTypeCode": "640"
+                }
+              ],
+              "ClientSecurity": {
+                "ClassificationCode": "0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Title": "DSP Employee - 12345678908 - Payer-Payee no link",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/ClientLink",
+              "Value": "640"
+            },
+            {
+              "Path": "*/AuthenticatedClient/ClientIdentifierTypeCode",
+              "Value": "10"
+            },
+            {
+              "Path": "*/AuthenticatedClient/ClientIdentifierValueID",
+              "Value": "12345678908"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "ProcessMessage": {
+            "MessageCode": 11020
+          }
+        }
+      },
+      {
+        "Title": "Registered Agent - 33221122 - with RAN link as NOT a BAS or TAX Agent",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33221122"
+            },
+            {
+              "Path": "*/SubjectClientCount",
+              "Value": "0"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33221122",
+            "ClientAccountID": "12345678122",
+            "ClientRoleTypeCode": "83"
+          }
+        }
+      },
+      {
+        "Title": "Registered Agent - 33114433 - with RAN link as TAX Agent (owned by ABN 12312312312)",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33114433"
+            },
+            {
+              "Path": "*/AuthenticatedClient/ClientIdentifierTypeCode",
+              "Value": "10"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "10"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "1231231231200", // Must be this because Get Client Details has a scenario defining that ABN 12312312312 owns 33114433
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33114433",
+            "ClientAccountID": "12345674433",
+            "ClientRoleTypeCode": "90"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00", //selected client id plus 2 zeros
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Registered Agent - 33550099 - with RAN link as TAX Agent but Client is End Dated",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33550099"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "ProcessMessages": [
+            {
+              "MessageCode": 40544 // Internal Id found is in the past. (Note, the Severity for this should probably be 'Information' (3), not 'Error' 1. But it doesn't matter to PDP.
+            }
+          ],
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33550099",
+            "ClientAccountID": "12345675599",
+            "ClientRoleTypeCode": "90"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00", //selected client id plus 2 zeros
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Registered Agent - 33550033 - with RAN link as BAS Agent but Client is End Dated",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33550033"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "ProcessMessages": [
+            {
+              "MessageCode": 40544 // Internal Id found is in the past. (Note, the Severity for this should probably be 'Information' (3), not 'Error' 1. But it doesn't matter to PDP.
+            }
+          ],
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "<*/AuthenticatedClient/ClientIdentifierValueID>00",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33550033",
+            "ClientAccountID": "12345675533",
+            "ClientRoleTypeCode": "95"
+          },
+          "SubjectClientList": [
+            {
+              "ClientIdentifiers": [
+                {
+                  "ClientInternalId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>00", //selected client id plus 2 zeros
+                  "SelectedClientTypeCode": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierTypeCode>",
+                  "SelectedClientId": "<*/SubjectClientList/Client/ClientIdentifiers/ClientIdentifier[1]/ClientIdentifierValueID>"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Title": "Registered Agent - 33114422 - with RAN link as TAX Agent with no ABN",
+        "Request": {
+          "Matchers": [
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierTypeCode",
+              "Value": "15"
+            },
+            {
+              "Path": "*/AuthenticatedAccountRole/ClientIdentifierValueID",
+              "Value": "33114422"
+            }
+          ]
+        },
+        "ResponseTemplate": {
+          "AuthenticatedClient": {
+            "ClientIdentifierValueID": "<*/AuthenticatedClient/ClientIdentifierValueID>",
+            "ClientIdentifierTypeCode": "<*/AuthenticatedClient/ClientIdentifierTypeCode>"
+          },
+          "AuthenticatedAccountRole": {
+            "ClientInternalId": "1231231231100",
+            "ClientIdentifierTypeCode": "15",
+            "ClientIdentifierValueID": "33114422",
+            "ClientAccountID": "44455566677",
+            "ClientRoleTypeCode": "90"
+          }
+        }
+      }
+    ]
+  }
+}

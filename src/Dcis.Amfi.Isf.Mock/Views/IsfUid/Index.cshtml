@@ -1,0 +1,48 @@
+﻿@model IList<User>
+
+@{
+    ViewData[ViewDataKeys.Title] = "ISF Uid Generator";
+
+    var users = Model.Select(u => new SelectListItem { Value = u.InternalIdentityId, Text = $"{u.GivenName} {u.FamilyName}" }).ToList();
+}
+
+<h1>ISF Uid Generator</h1>
+
+<hr />
+<form asp-action="Generate" class="row col-6 align-items-center">
+    <label for="selectUser" class="form-label">Choose a user:</label>
+    <div class="hstack gap-3">
+        <select class="form-select" id="selectUser" name="SelectUser" asp-items="users" onchange="setValue($('#selectUser').val());">
+            <option value="">Please select</option>
+        </select>
+        <input id="btnSubmit" type="submit" value="Submit" class="btn btn-outline-secondary" disabled />
+    </div>
+</form>
+<br />
+<pre id="selectedUser"></pre>
+<script>
+    window.onload = function () {
+        var loginUser = '@ViewData[ViewDataKeys.LoginUser]';
+        if (loginUser) {
+            $('#selectUser').val(loginUser);
+            setValue(loginUser);
+        }
+    }
+
+    function setValue(selected) {
+        $('#selectedUser').text('');
+        $('#selectedUser').hide();
+        $('#btnSubmit').prop('disabled', true);
+
+        if (selected) {
+            $.get("/api/v1/user/" + selected)
+                .always(function (user) {
+                    if (user) {
+                        $('#selectedUser').text(JSON.stringify(user, undefined, 4));
+                        $('#selectedUser').show();
+                        $('#btnSubmit').prop('disabled', false);
+                    }
+                });
+        }
+    }
+</script>

@@ -1,0 +1,182 @@
+﻿@using Dcis.Amfi.Isf.Mock.Constants
+@model Dcis.Amfi.Isf.Mock.Models.User
+
+@{
+    ViewData[ViewDataKeys.Title] = "ISF Uid Generator";
+}
+
+<h2>@Model.DisplayName > Generate ISF Uid</h2>
+
+<hr />
+<form asp-action="ToUrl" asp-controller="Redirect" enctype="application/x-www-form-urlencoded" target="Redirect_Tab">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="mb-3 row">
+        <div class="form-group col-md-6">
+            <label asp-for="InternalIdentityId" class="control-label">Ato Internal Id</label>
+            <input asp-for="InternalIdentityId" class="form-control" />
+            <span asp-validation-for="InternalIdentityId" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="OperatorInternalId" class="control-label">Operator Internal Id</label>
+            <input asp-for="OperatorInternalId" class="form-control" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-md-6">
+            <label asp-for="Subject" class="control-label"></label>
+            <input asp-for="Subject" class="form-control" />
+            <span asp-validation-for="Subject" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="form-group col-md-6">
+            <label asp-for="GivenName" class="control-label">Given Name</label>
+            <input asp-for="GivenName" class="form-control" />
+            <span asp-validation-for="GivenName" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="FamilyName" class="control-label">Family Name</label>
+            <input asp-for="FamilyName" class="form-control" />
+            <span asp-validation-for="FamilyName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="form-group col-md-6">
+            <label asp-for="Audience" class="control-label"></label>
+            <input asp-for="Audience" class="form-control" />
+            <span asp-validation-for="Audience" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Issuer" class="control-label"></label>
+            <input asp-for="Issuer" class="form-control" />
+            <span asp-validation-for="Issuer" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="form-group col-md-6">
+            <label asp-for="CredentialType" class="control-label">Credential Type</label>
+            <input asp-for="CredentialType" class="form-control" />
+            <span asp-validation-for="CredentialType" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="JwtType" class="control-label">Jwt Type</label>
+            <select class="form-select" asp-for="JwtType" asp-items="Html.GetEnumSelectList<JwtType>()" onchange="setIssuer();"></select>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="form-group col-md-12">
+            <label for="addClaims" class="control-label">Additional Claims</label>
+            <textarea name="additionalClaims" id="addClaims" class="form-control" rows="6"></textarea>
+            <input name="JsonClaims" id="hiddenClaims" type="hidden" value="" />
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="form-group col-md-12">
+            <label asp-for="RedirectUrl" class="control-label">Redirect To Url</label>
+            <input asp-for="RedirectUrl" class="form-control" />
+            <span asp-validation-for="RedirectUrl" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="form-group col-md-6">
+            <input type="submit" name="btnRedirect" value="Redirect To Url" class="btn btn-outline-secondary" />
+            <input type="button" name="btnGenerate" value="Generate ISF Uid" class="btn btn-outline-secondary" onclick="generateJwtUid()" />
+        </div>
+    </div>
+</form>
+<div>
+    <a href="/IsfUid">Back to Select User</a>
+</div>
+<br />
+
+<div class="mb-3 row" id="generatedUids">
+    <div class="col-md-12">
+        <label for="jwtUid" class="control-label">Decoded Jwt Uid</label>
+        <textarea id="jwtUid" class="form-control" rows="20" readonly></textarea>
+        <br/>
+        <label for="jwtUidEncoded" class="control-label">Encoded Jwt Uid</label>
+        <textarea id="jwtUidEncoded" class="form-control" rows="5" readonly></textarea>
+    </div>
+</div>
+
+<script>
+    var user;
+    window.onload = function () {
+        user = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(@Model));
+
+        var claims = JSON.stringify(user.Claims, undefined, 4);
+        $("#addClaims").change(function () {
+            $('#hiddenClaims').val($(this).val());
+        });
+
+        $('#addClaims').val(JSON.stringify(user.Claims, undefined, 4));
+        $('#hiddenClaims').val(user.JsonClaims);
+        
+        setIssuer();
+        var audience = $('#Audience').val();
+        if(!audience){
+            $('#Audience').val('https://am.ato.gov.au/foreigninvestor');
+        }
+
+        $('#generatedUids').hide();
+        displayJwt(user.JwtUid);
+    }
+
+    function displayJwt(jwtUid){
+        if (jwtUid) {
+            var jwtToken = jwtUid.split('.');
+            var header = parseJwt(jwtToken[0]);
+            var payLoad = parseJwt(jwtToken[1]);
+
+            $('#jwtUid').text('Header:\r\n' + header + '\r\n\r\nPayload:\r\n' + payLoad);
+            $('#jwtUidEncoded').text(jwtUid);
+            $('#generatedUids').show();
+        }
+    }
+
+    function setIssuer(){
+        $('#Issuer').val($('#JwtType').val() == '1' ? 'https://vanguard.business.gov.au/SignatureVerification/' : 'https://ato.gov.au/atoAuthProvider');
+    }
+
+    function parseJwt (token) {
+        var base64 = token.replace(/-/g, '+').replace(/_/g, '/');
+        var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+
+        return JSON.stringify(JSON.parse(jsonPayload), undefined, 4);
+    }
+
+    function generateJwtUid() {
+        // map form data to user object
+        user.InternalIdentityId = $('#InternalIdentityId').val();
+        user.OperatorInternalId = $('#OperatorInternalId').val();
+        user.Subject = $('#Subject').val();
+        user.Email = $('#Email').val();
+        user.GivenName = $('#GivenName').val();
+        user.FamilyName = $('#FamilyName').val();
+        user.Audience = $('#Audience').val();
+        user.Issuer = $('#Issuer').val();
+        user.CredentialType = $('#CredentialType').val();
+        user.JwtType = JSON.parse($('#JwtType').val());
+        user.Claims = JSON.parse($('#addClaims').val());
+        user.RedirectUrl = $('#RedirectUrl').val();
+        user.JsonClaims = $('#hiddenClaims').val();
+
+        // call generate jwt api
+        $.ajax({
+            url: '/api/v1/user/generateJwt',
+            type: 'post',
+            contentType: 'application/json',
+            success: function (jwt) {
+                displayJwt(jwt);
+            },
+            data: JSON.stringify(user)
+        });
+    }
+</script>

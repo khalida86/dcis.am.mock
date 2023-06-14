@@ -1,0 +1,58 @@
+﻿@model IList<Entity>
+
+@{
+    ViewData[ViewDataKeys.Title] = "OSFI Linked Entities";
+    var user = ViewData[ViewDataKeys.SelectedUser] as User;
+    bool? openAmfiInNewTab = (bool?)ViewData[ViewDataKeys.OpenAMFIinNewTab];
+}
+
+<h2>@user?.DisplayName > Linked Entities</h2>
+
+<hr />
+<form asp-action="ToAmfi" asp-controller="Redirect" enctype="application/x-www-form-urlencoded" target="@(openAmfiInNewTab.GetValueOrDefault() ? "AMFI-TAB" : "_self")">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">ABN</th>
+                        <th scope="col">ARN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <input class="form-check-input" type="radio" name="selectedEntity" id="radio_@item.Identifier" value="@item.Identifier" />
+                                <label for="radio_@item.Identifier">@item.DisplayName</label>
+                            </td>
+                            <td>
+                                <label for="radio_@item.Identifier">@item.ABN</label>
+                            </td>
+                            <td>
+                                <label for="radio_@item.Identifier">@item.ARN</label>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <input name="selectedUser" type="hidden" value="@user?.InternalIdentityId" />
+            <input id="btnNext" type="submit" value="Next" class="btn btn-outline-secondary" disabled  />
+        </div>
+    </div>
+</form>
+<div>
+    <a href="/OsfiLauncher">Back to Select User</a>
+</div>
+
+<script>
+    window.onload = function () {
+        $(':radio[name="selectedEntity"]').change(function () {
+            var selectedEntity = $(this).filter(':checked');
+
+            $('#btnNext').prop('disabled', (selectedEntity === undefined || selectedEntity === null));
+        });
+    }
+</script>

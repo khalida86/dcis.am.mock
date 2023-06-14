@@ -1,0 +1,70 @@
+[
+  {
+    "internalIdentityId": "PE8NMZ4@localhost",
+    "subject": "wang@zhang.com",
+    "email": "wang@zhang.com",
+    "givenName": "Wang",
+    "familyName": "Zhang",
+    "credentialType": 4,
+    "jwtType": 0, // BOIDC Jwt
+    "redirectUrl": "http://{host}/#/{entityType}/{entityId}", 
+    "claimAuthUrl": "http://{host}/#/claimauth",
+    "claims": [
+      {
+        "type": "urn://au.gov.ato/authentication/IdentityProofingStrength",
+        "value": "IP3"
+      }
+    ]
+  },
+  {
+    "internalIdentityId": "RD9NMZ4@localhost",
+    "subject": "jane@oxford.com",
+    "email": "jane@oxford.com",
+    "givenName": "Jane",
+    "familyName": "Oxford",
+    "credentialType": 1,
+    "jwtType": 1, // FAS Jwt
+    "redirectUrl": "http://{host}/#/{entityType}/{entityId}", 
+    "claimAuthUrl": "http://{host}/#/claimauth",
+    "claims": [
+      {
+        "type": "urn://au.gov.ato/authentication/IdentityProofingStrength",
+        "value": "IP1"
+      }
+    ]
+  },
+  {
+    "internalIdentityId": "readOrwriteSARS@agency.user",
+    "subject": "readOrwriteSARS@agency.user",
+    "email": "readOrwriteSARS@agency.user",
+    "givenName": "Read Write",
+    "familyName": "Agent",
+    "credentialType": 1,
+    "jwtType": 1, // FAS Jwt
+    "redirectUrl": "http://{host}/#/search", 
+    "claimAuthUrl": "http://{host}/#/claimauth",
+    "claims": [
+      {
+        "type": "urn://au.gov.ato/authentication/IdentityProofingStrength",
+        "value": "IP1"
+      }
+    ]
+  },
+  {
+    "internalIdentityId": "readOnlySARS@agency.user",
+    "subject": "readOnlySARS@agency.user",
+    "email": "readOnlySARS@agency.user",
+    "givenName": "Read Only",
+    "familyName": "Agent",
+    "credentialType": 1,
+    "jwtType": 1, // FAS Jwt
+    "redirectUrl": "http://{host}/#/search", 
+    "claimAuthUrl": "http://{host}/#/claimauth",
+    "claims": [
+      {
+        "type": "urn://au.gov.ato/authentication/IdentityProofingStrength",
+        "value": "IP1"
+      }	  
+    ]
+  }
+]

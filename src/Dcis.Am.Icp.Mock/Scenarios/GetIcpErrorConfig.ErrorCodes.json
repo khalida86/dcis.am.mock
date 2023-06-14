@@ -1,0 +1,102 @@
+﻿// Refer to 'GetClientDetailsV2ResultCodes.cs' for the codes.
+{
+  "Scenarios": {
+    "GetIcpErrorMappings": [
+      {
+        "IdentifierType": 10,
+        "IdentifierValue": "12365478922",
+        "IcpCode": 11020
+      },
+      {
+        "IdentifierType": 20,
+        "IdentifierValue": "112233222222",
+        "IcpCode": 11020
+      },
+      {
+        "IdentifierType": 20,
+        "IdentifierValue": "9999999999993",
+        "IcpCode": 40190
+      },
+      {
+        "IdentifierType": 20,
+        "IdentifierValue": "9999999999994",
+        "IcpCode": 40192
+      },
+      {
+        "IdentifierType": 20,
+        "IdentifierValue": "9999999999995",
+        "IcpCode": 25153
+      },
+      {
+        "IdentifierType": 20,
+        "IdentifierValue": "9999999999996",
+        "IcpCode": 41025
+      },
+      {
+        "IdentifierType": 20,
+        "IdentifierValue": "9999999999997",
+        "IcpCode": 91894
+      },
+      {
+        "IdentifierType": 20,
+        "IdentifierValue": "9999999999998",
+        "IcpCode": 91895
+      },
+      {
+        "IdentifierType": 20,
+        "IdentifierValue": "9999999999999",
+        "IcpCode": 61333
+      },
+      {
+        "IdentifierType": 20,
+        "IdentifierValue": "9999999999992",
+        "IcpCode": 40205
+      },
+      {
+        "IdentifierType": 20,
+        "IdentifierValue": "9999999999991",
+        "IcpCode": 60286
+      },
+      {
+        "IdentifierType": 10,
+        "IdentifierValue": "12365478922",
+        "IcpCode": 11020
+      },
+      {
+        "IdentifierType": 20,
+        "IdentifierValue": "112233222222",
+        "IcpCode": 11020
+      },
+      {
+        "IdentifierType": 500,
+        "IdentifierValue": "NotInIcpMubn1-fef1-4182-8de7-b69d15e03839",
+        "IcpCode": 11020
+      },
+      {
+        "IdentifierType": 500,
+        "IdentifierValue": "NotInIcpMubn2-fef1-4182-8de7-b69d15e03839",
+        "IcpCode": 11020
+      },
+      {
+        "IdentifierType": 500,
+        "IdentifierValue": "NotInIcpMubn3-fef1-4182-8de7-b69d15e03839",
+        "IcpCode": 11020
+      },
+      {
+        "IdentifierType": 500,
+        "IdentifierValue": "NotInIcpMubn4-fef1-4182-8de7-b69d15e03839",
+        "IcpCode": 11020
+      },
+      {
+        "IdentifierType": 500,
+        "IdentifierValue": "NotInIcpMubn5-fef1-4182-8de7-b69d15e03839",
+        "IcpCode": 11020
+      },
+      {
+        "IdentifierType": 500,
+        "IdentifierValue": "NotInIcpMubn6-fef1-4182-8de7-b69d15e03839",
+        "IcpCode": 11020
+      }
+    ]
+  }
+}

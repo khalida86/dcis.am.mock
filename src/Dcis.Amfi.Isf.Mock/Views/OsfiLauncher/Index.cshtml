@@ -1,0 +1,65 @@
+﻿@model IList<User>
+
+@{
+    ViewData[ViewDataKeys.Title] = "OSFI Launcher";
+
+    var users = Model.Select(u => new SelectListItem { Value = u.InternalIdentityId, Text = $"{u.GivenName} {u.FamilyName}" }).ToList();
+}
+
+<h1>OSFI Launcher</h1>
+
+<hr />
+<form asp-action="LinkedEntities" class="row col-6 align-items-center">
+    <label for="selectUser" class="form-label">Choose a user:</label>
+    <div class="hstack gap-3">
+        <select class="form-select" id="selectUser" name="selectUser" asp-items="users" onchange="setValue($('#selectUser').val());">
+            <option value="">Please select</option>
+        </select>
+        <input id="btnSubmit" type="submit" value="Submit" class="btn btn-outline-secondary" disabled />
+    </div>
+</form>
+<div id="claimAuth" style="display: none;">
+    <br />
+    <form asp-action="ToClaimAuth" asp-controller="Redirect" enctype="application/x-www-form-urlencoded" class="row col-6 align-items-center">
+        <label for="txtClaimAuthUrl" class="form-label">Redirect to AMFI Claim Authorisation page</label>
+        <div class="hstack gap-3">
+            <input id="txtSelectedUser" type="hidden" name="txtSelectedUser" />
+            <input id="txtClaimAuthUrl" type="url" name="txtClaimAuthUrl" class="form-control" />
+            <input id="btnClaimAuth" type="submit" value="Claim Auth" class="btn btn-outline-secondary" disabled />
+        </div>
+    </form>
+</div>
+<br />
+<pre id="selectedUser" style="display: none;"></pre>
+<script>
+    window.onload = function(){
+        var loginUser = '@ViewData[ViewDataKeys.LoginUser]';
+        if (loginUser) {
+            $('#selectUser').val(loginUser);
+            setValue(loginUser);
+        }
+    }
+
+    function setValue(selected) {
+        $('#selectedUser').text('');
+        $('#selectedUser').hide();
+        $('#btnSubmit').prop('disabled', true);
+        $('#claimAuth').hide();
+        $('#btnClaimAuth').prop('disabled', true);
+        $('#txtSelectedUser').val(selected);
+
+        if (selected) {
+            $.get("/api/v1/user/" + selected)
+                .always(function (user) {
+                    if (user) {
+                        $('#selectedUser').text(JSON.stringify(user, undefined, 4));
+                        $('#selectedUser').show();
+                        $('#btnSubmit').prop('disabled', false);
+                        $('#claimAuth').show();
+                        $('#btnClaimAuth').prop('disabled', false);
+                        $('#txtClaimAuthUrl').val(user.claimAuthUrl);
+                    }
+                });
+        }
+    }
+</script>

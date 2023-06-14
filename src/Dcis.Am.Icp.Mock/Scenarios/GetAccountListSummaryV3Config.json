@@ -1,0 +1,497 @@
+{
+  "Scenarios": {
+    "GetAccountListSummariesV3": [
+      {
+        "ClientInternalID": 2000003311077,
+        "AccountSummaryCount": 5,
+        "RecordTotalCount": 5,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "27526004",
+            "ClientExternalIdentifierTypeCode": 15,
+            "ClientAccountID": "5421451",
+            "ClientAccountTypeCode": 11,
+            "ClientAccountSequenceNumber": 551,
+            "ClientAccountBusinessMainActivityDescription": "Agricultural",
+            "ClientAccountTypeCategoryCode": "S",
+            "ClientAccountCurrentBalanceAmount": 120.32,
+            "ClientAccountName": "Account Name 1",
+            "AccountingTreatmentTypeConcatenateName": null,
+            "PaymentArrangementID": 42124575211,
+            "BillPaymentReferenceNumber": "ref5",
+            "TaxOfficeANZSICSubclassCode": 12312,
+            "ABRAccountIndicator": "A"
+          },
+          {
+            "ClientExternalID": "27526004",
+            "ClientExternalIdentifierTypeCode": 15,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 12,
+            "ClientAccountSequenceNumber": 552,
+            "ClientAccountBusinessMainActivityDescription": "Business",
+            "ClientAccountTypeCategoryCode": "T",
+            "ClientAccountCurrentBalanceAmount": 120.32,
+            "ClientAccountName": "Account Name 2",
+            "AccountingTreatmentTypeConcatenateName": null,
+            "PaymentArrangementID": 42124575212,
+            "BillPaymentReferenceNumber": "ref5",
+            "TaxOfficeANZSICSubclassCode": 23423,
+            "ABRAccountIndicator": "B"
+          },
+          {
+            "ClientExternalID": "27526004",
+            "ClientExternalIdentifierTypeCode": 15,
+            "ClientAccountID": "5421453",
+            "ClientAccountTypeCode": 13,
+            "ClientAccountSequenceNumber": 553,
+            "ClientAccountBusinessMainActivityDescription": "Costing",
+            "ClientAccountTypeCategoryCode": "U",
+            "ClientAccountCurrentBalanceAmount": 120.33,
+            "ClientAccountName": "Account Name 3",
+            "AccountingTreatmentTypeConcatenateName": null,
+            "PaymentArrangementID": 42124575213,
+            "BillPaymentReferenceNumber": "ref5",
+            "TaxOfficeANZSICSubclassCode": "12314",
+            "ABRAccountIndicator": "C"
+
+          },
+          {
+            "ClientExternalID": "27526004",
+            "ClientExternalIdentifierTypeCode": 15,
+            "ClientAccountID": "5421454",
+            "ClientAccountTypeCode": 14,
+            "ClientAccountSequenceNumber": 554,
+            "ClientAccountBusinessMainActivityDescription": "Defence Sector",
+            "ClientAccountTypeCategoryCode": "V",
+            "ClientAccountCurrentBalanceAmount": 120.34,
+            "ClientAccountName": "Account Name 4",
+            "AccountingTreatmentTypeConcatenateName": null,
+            "PaymentArrangementID": 42124575214,
+            "BillPaymentReferenceNumber": "ref5",
+            "TaxOfficeANZSICSubclassCode": 12315,
+            "ABRAccountIndicator": "D"
+          },
+          {
+            "ClientExternalID": "27526004",
+            "ClientExternalIdentifierTypeCode": 15,
+            "ClientAccountID": "5421455",
+            "ClientAccountTypeCode": 15,
+            "ClientAccountSequenceNumber": 555,
+            "ClientAccountBusinessMainActivityDescription": "Engineering Stuff",
+            "ClientAccountTypeCategoryCode": "W",
+            "ClientAccountCurrentBalanceAmount": 120.35,
+            "ClientAccountName": "Account Name 5",
+            "AccountingTreatmentTypeConcatenateName": null,
+            "PaymentArrangementID": 42124575215,
+            "BillPaymentReferenceNumber": "ref5",
+            "TaxOfficeANZSICSubclassCode": 12316,
+            "ABRAccountIndicator": "E"
+          }
+        ]
+      },
+      {
+        "ClientInternalID": 4447869789990,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "444786978999",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111222299990,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111122229999",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111333399990,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111133339999",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111444499990,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111144449999",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111555599990,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111155559999",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111222233330,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111122223333",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //1
+      }, //end
+      {
+        "ClientInternalID": 1111222244440,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111122224444",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //2
+      }, //end
+      {
+        "ClientInternalID": 1111222255550,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111122225555",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260 // Account type FIRB
+          }
+        ] //3
+      }, //end
+      {
+        "ClientInternalID": 1111222266660,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111122226666",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //4
+      }, //end
+      {
+        "ClientInternalID": 1122112266660,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "112211226666",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //4
+      }, //end
+      {
+        "ClientInternalID": 1133113366660,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "113311336666",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //4
+      }, //end
+      {
+        "ClientInternalID": 2226668881100,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "22266688811",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //4
+      }, //end
+      {
+        "ClientInternalID": 4446668881100,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "44466688811",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //4
+      }, //end
+      {
+        "ClientInternalID": 1111222288880,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111122228888",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //4
+      }, //end
+      {
+        "ClientInternalID": 2223334442200,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "22233344422",
+            "ClientExternalIdentifierTypeCode": 10,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //5
+      }, //end
+      {
+        "ClientInternalID": 2223334443300,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "22233344433",
+            "ClientExternalIdentifierTypeCode": 10,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //6
+      }, //end
+      {
+        "ClientInternalID": 2223334441100,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "22233344411",
+            "ClientExternalIdentifierTypeCode": 10,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //4
+      }, //end
+      {
+        "ClientInternalID": 2223334445500,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "22233344455",
+            "ClientExternalIdentifierTypeCode": 10,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //1
+      }, //end
+      {
+        "ClientInternalID": 2223334447700,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "22233344477",
+            "ClientExternalIdentifierTypeCode": 10,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ] //2
+      }, //end
+      {
+        "ClientInternalID": 2225554445500,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "22255544455",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111333311110,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111133331111",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111333333300,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "11113333333",
+            "ClientExternalIdentifierTypeCode": 10,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111333344400,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "11113333444",
+            "ClientExternalIdentifierTypeCode": 10,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111333355550,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111133335555",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111333366660,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111133336666",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111333377700,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "11113333777",
+            "ClientExternalIdentifierTypeCode": 10,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111333388800,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "11113333888",
+            "ClientExternalIdentifierTypeCode": 10,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111666633330,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111166663333",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111999911110,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111199991111",
+            "ClientExternalIdentifierTypeCode": 20,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 1111999911110,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "111199992222",
+            "ClientExternalIdentifierTypeCode": 10,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260
+          }
+        ]
+      }, //end
+      {
+        "ClientInternalID": 2223334448800,
+        "AccountSummaryCount": 1,
+        "RecordTotalCount": 1,
+        "AccountSummaryDetails": [
+          {
+            "ClientExternalID": "22233344488",
+            "ClientExternalIdentifierTypeCode": 10,
+            "ClientAccountID": "5421452",
+            "ClientAccountTypeCode": 260 // Account type FIRB
+          }
+        ] //3
+      } //end
+    ]
+  }
+}
